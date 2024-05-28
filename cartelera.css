@@ -1,0 +1,181 @@
+
+*{
+   color: white;
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   border-radius: 5vw;
+}
+body{
+   background: linear-gradient(#0A667D, #1A2A42, #641616);
+}
+.grid-container>*{
+   text-align: center;
+   border-radius: 1.5vw;
+   padding: 1vw;
+   margin:1% 2.5% ;
+   background-color: black;
+   place-content: center;
+   width: 95%;
+}
+
+/* <----------------------Barra superior de navegacion----------------------> */
+.navbar{ 
+   grid-area: navbar;
+   font-size: 3vw;
+}
+.navbar a{
+   text-decoration: none;
+   color: white;
+   margin: 2vw 5vw;
+}
+
+/* <----------------------Carrusel----------------------> */
+.header{ /* Contenedor del carrusel */
+   grid-area: header;
+}
+section {
+   display: flex;
+   width: 90%;
+   height: 500px;
+   margin-left: 5%;
+   margin-right: 5%;
+}
+
+section img { 
+   width: 0;
+   flex-grow: 1;
+   object-fit: cover;
+   opacity: .8;
+   transition: .5s ease;
+}
+
+
+section img:hover {
+   cursor: crosshair;
+   width: 30vw;
+   opacity: 1;
+   filter: contrast(120%);
+}
+
+/* <----------------------Anuncio de Cartelera----------------------> */
+.division{
+   grid-area: division;
+}
+.articulo{
+   grid-area: articulo;
+   background-color: transparent;
+}
+h1{
+   color: white;
+   text-shadow: rgb(170, 74, 74) 0.5vw  0.2vw 0.4vw;
+   font-style: italic;
+   text-align: center;
+   font-size: 4vw;
+   margin: 0.1vw;
+}
+
+/* <----------------------Contenedor de peliculas----------------------> */
+.container{
+   display: grid;
+   background-color: transparent;
+   grid-template-columns: repeat(2,auto);
+   grid-gap: 2vw;
+   place-content: center;
+}
+
+.card{
+   width: 100%;
+   height: auto;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   background-color: black;
+}
+.image{
+   width: 40%;
+   margin: 1vw;
+   height: 90%;
+   align-items: center;
+}
+.description{
+   width: 50%;
+   font-size: 1.5vw;
+}
+.card img{
+   width: 100%;
+   height: auto;
+} 
+.main-btn {      
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6vw;
+ }
+ .btn {               
+   color:white;
+   text-decoration: none;
+   width: 12vw;
+   font-size: 2.2vw;
+   font-family: sans-serif;
+   text-align: center;
+   padding: .5vw 1vw;
+   transition: all  0.6s ease;
+   background: rgb(63,94,251);
+   background: radial-gradient(circle, rgba(63,94,251,0.8827906162464986) 8%, rgba(252,70,107,0.7203256302521008) 100%);
+   border-radius: 1.5vw;
+}
+
+.btn:hover {
+   box-shadow: 0 0 10px #ff0080, 0 0  40px #ff0080, 0 0 80px #ff0080;
+   background-color: #ff0080;
+}   
+
+.footer{
+   grid-area: footer;
+   font-size: 3vw;
+}
+/* Responsive para moviles */
+@media (max-width: 767px) {
+   .header{
+      display: none;
+   }
+   
+   /* <----------------------Contenedor de peliculas----------------------> */
+   .container{
+      grid-template-columns: auto;
+   }
+   .card{
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+   }
+   .image{
+      width: 75%;
+      margin: calc(25%/4);
+      height: 80%;
+   }
+   .description{
+      width: 90%;
+      font-size: 3vw;
+   }
+
+   .main-btn {      
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       height: 6vw;
+    }
+    .btn {               
+      color:white;
+      text-decoration: none;
+      width: 20vw;
+      font-size: 2.2vw;
+      text-align: center;
+      padding: 1.5vw;
+      transition: all  0.6s ease;
+   }
+   }
