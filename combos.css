@@ -47,7 +47,7 @@ nav a{
     text-align: center;
     padding: 1.5vw;
     margin: 3vw;
-    border: 0.2vw dotted white;
+    outline:0.2vw dotted white;;
     border-radius: 1vw;
 }
 .card dl{
