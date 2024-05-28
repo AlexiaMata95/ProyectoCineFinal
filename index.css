@@ -6,6 +6,16 @@
 body{
     background: linear-gradient(#0A667D, #1A2A42, #641616);
 }
+.grid-container{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas:
+    "navbar navbar navbar"
+    "header header header"
+    "division division division"
+    "articulo articulo sidebar"
+    "footer footer footer";
+}
 .grid-container>*{
     text-align: center;
     border-radius: 1.5vw;
@@ -30,8 +40,12 @@ body{
 .division{
     grid-area: division;
 }
+.card{
+    height: 50%;
+}
 .sidebar{
     grid-area: sidebar;
+    overflow-y: auto;
     place-items: center;
 }
 .articulo{
@@ -39,42 +53,4 @@ body{
 }
 .footer{
     grid-area: footer;
-}
-/*Vista para el telefono*/
-.grid-container{
-    display: grid;
-    gap: 10px;
-    grid-template-columns: auto;
-    grid-template-areas:
-    "header"
-    "navbar"
-    "division"
-    "sidebar"
-    "articulo"
-    "footer" ;
-}
-/*Vista tablet*/
-@media(min-width:768px){
-    .grid-container{
-        grid-template-columns: auto;
-        grid-template-areas:
-        "header header"
-        "navbar navbar"
-        "division division"
-        "sidebar sidebar"
-        "articulo articulo"
-        "footer footer";
-    }
-}
-@media(min-width:900px){
-    .grid-container{
-        grid-template-columns: auto;
-        grid-template-areas:
-        "navbar navbar navbar"
-        "header header header"
-        "division division division"
-        "articulo articulo sidebar"
-        "footer footer footer";
-    }
-    
 }
