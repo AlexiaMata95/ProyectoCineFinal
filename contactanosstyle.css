@@ -1,0 +1,101 @@
+*{
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 5vw;
+ }
+ body{
+    background: linear-gradient(#0A667D, #1A2A42, #641616);
+ }
+.grid-container{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: 
+    "header header"
+    "division division"
+    "sidebar articulo "
+    "footer footer";
+}
+.grid-container>*{
+    text-align: center;
+    border-radius: 1.5vw;
+    padding: 1vw;
+    margin: 0.5%;
+    background-color: black;
+    place-content: center;
+    width: auto;
+ }
+.header{
+    grid-area: header;
+ }
+ .navbar{ 
+    grid-area: navbar;
+    font-size: 3vw;
+ }
+ .navbar a{
+    text-decoration: none;
+    color: white;
+    margin: 2vw 5vw;
+ }
+ .division{
+    grid-area: division;
+    font-size: 2vw;
+ }
+ .sidebar{
+    grid-area: sidebar;
+    font-size: 2vw;
+    margin-left: auto 0;
+ }
+ .articulo{
+    grid-area: articulo;
+    font-size: 2vw;
+    margin-left: auto 0;
+ }
+ .Cards{
+    display: flex;
+    width: 100%;
+ }
+ .card{
+    width: 80%;
+    margin: 2vw;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+ }
+ .footer{
+    grid-area: footer;
+    font-size: 3vw;
+ }
+ @media (max-width: 767px) {
+    .grid-container{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-areas: 
+        "header "
+        "division"
+        "sidebar"
+        "articulo "
+        "footer ";
+    }
+    .Cards{
+        display: flex;
+        width: 100%;
+     }
+     .card{
+        width: 80%;
+        margin: 2vw;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+     }
+     .footer{
+        grid-area: footer;
+        font-size: 3vw;
+     }
+ }
+ 
